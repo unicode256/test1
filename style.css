@@ -3,39 +3,130 @@
     margin: 0;
     padding: 0;
     font-family: 'Helvetica';
-    z-index: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.dark_bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 998;
 }
 
 .menu_bar {
     width: 100%;
-    z-index: 1;
+    z-index: 1000;
     background-color: #fff;
     position: fixed;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
 }
 
 .menu_bar ul {
-    margin-left: 8%;
     overflow: auto;
+}
+
+.menu_bar > ul {
+    width: 72.5%;
+    margin: auto;
 }
 
 .menu_bar li {
     width: 80px;
     height: 88px;
     float: left;
-    list-style-type: none;
     padding-top: 35px;
     padding-bottom: 32px;
     border-bottom: 3px solid #fff; 
     margin-right: 40px;
     box-sizing: border-box;
     cursor: pointer;
-    transition: .3s;
+    transition: .15s;
 }
 
-.menu_bar li:hover {
+.menu_bar > ul > li:hover {
     border-bottom-color: rgb(245, 180, 95);
-    transition: .3s;
+    transition: .15s;
+}
+
+.menu_bar .submenu {
+    position: fixed;
+    top: 88px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 70%;
+    display: none;
+}
+
+.menu_bar .submenu.s4 {
+    display: block;
+    background-color: #fff;
+    padding: 20px 28px 30px 28px;
+}
+
+.menu_bar .submenu.s4 li {
+    width: 107px;
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+    text-align: center;
+    box-sizing: unset;
+    height: auto;
+    font-size: 18px;
+    text-align: left;
+}
+
+.menu_bar .submenu.s4 li:first-child {
+    margin-right: 85px;
+}
+
+.menu_bar .submenu {
+    z-index: 999;
+}
+
+.menu_bar .submenu.s2 > ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 28px 0 28px;
+    background-color: #fff;
+    height: 300px;
+    box-shadow: inset 0px 111px 46px -123px rgba(0,0,0,0.27);
+}
+
+.menu_bar .submenu.s2 li, .menu_bar .submenu.s2 ul ul {
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+    text-align: center;
+    box-sizing: unset;
+    height: auto;
+    width: 107px;
+    font-size: 18px;
+    text-align: left;
+}
+
+.menu_bar .submenu.s2 .subsubmenu.s2_2, .menu_bar .submenu.s2 .subsubmenu.s2_4 {
+    width: 100%;
+}
+
+.menu_bar .submenu.s2 .subsubmenu.s2_2 li, .menu_bar .submenu.s2 .subsubmenu.s2_4 li {
+    font-size: 14px;
+    width: 95px;
+}
+
+.menu_bar ul .submenu li .subsubmenu{
+    margin-top: 15px;
+}
+
+.menu_bar .submenu li .subsubmenu li{
+    margin-bottom: 10px;
 }
 
 .content {

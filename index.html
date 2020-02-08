@@ -4,14 +4,51 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>Example Page</title>
         <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="menu_bar">
             <ul>
                 <li>Элемент 1</li>
-                <li>Элемент 2</li>
+                <li class="hoverable h2">Элемент 2
+                    <div class="submenu s2 fade_element">
+                        <ul>
+                            <li><a>Элемент 2.1</a></li>
+                            <li>
+                                <a>Элемент 2.2</a>
+                                <ul class="subsubmenu s2_2">
+                                    <li><a>Элемент 2.2.1</a></li>
+                                    <li><a>Элемент 2.2.2</a></li>
+                                    <li><a>Элемент 2.2.3</a></li>
+                                </ul>
+                            </li>
+                            <li><a>Элемент 2.3</a></li>
+                            <li>
+                                <a>Элемент 2.4</a>
+                                <ul class="subsubmenu s2_4">
+                                    <li><a>Элемент 2.4.1</a></li>
+                                    <li><a>Элемент 2.4.2</a></li>
+                                    <li><a>Элемент 2.4.3</a></li>
+                                    <li><a>Элемент 2.4.4</a></li>
+                                    <li><a>Элемент 2.4.5</a></li>
+                                    <li><a>Элемент 2.4.6</a></li>
+                                    <li><a>Элемент 2.4.7</a></li>
+                                </ul>
+                            </li>
+                            <li><a>Элемент 2.5</a></li>
+                            <li><a>Элемент 2.6</a></li>
+                        </ul>
+                    </div>
+                </li>
                 <li>Элемент 3</li>
-                <li>Элемент 4</li>
+                <li>Элемент 4
+                    <div class="submenu s4 fade_element">
+                        <ul>
+                            <li>Элемент 4.1</li>
+                            <li>Элемент 4.2</li>
+                        </ul>
+                    </div>
+                </li>
                 <li>Элемент 5</li>
                 <li>Элемент 6</li>
             </ul>
@@ -27,5 +64,7 @@
             <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
             <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
         </div>
+        <div class="dark_bg fade_element"></div>
     </body>
 </html>
+<script src="script.js"></script>
