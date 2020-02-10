@@ -1,5 +1,4 @@
 * {
-    /* border: 1px solid black; */
     margin: 0;
     padding: 0;
     font-family: 'Helvetica';
@@ -110,7 +109,6 @@ li {
 
 .menu_bar .submenu.s2, .menu_bar .submenu.s4 {
     display: none;
-    /* поменять обратно на нон */
 }
 
 .menu_bar .submenu.s2 > ul {
@@ -175,7 +173,6 @@ li {
     right: 22px;
     width: 45px;
     height: 38px;
-    /* border: 1px solid black; */
     display: none;
 }
 
@@ -189,9 +186,6 @@ li {
 }
 
 @media screen and (max-width: 1017px) {
-    .menu_bar * {
-        /* border: 1px solid black; */
-    }
 
     .menu_bar > ul {
         position: fixed;
@@ -230,7 +224,6 @@ li {
         padding: 0;
         border-bottom: none;
         cursor: unset;
-        /* границу потом убрать */
     }
 
     .menu_bar {
@@ -274,7 +267,6 @@ li {
         display: block;
         padding: 18px 0 18px 25px;
         border-bottom: 1px solid rgb(240, 240, 240);
-        /* width: calc(100% - 56px); */
     }
 
     .menu_bar ul .submenu li .subsubmenu li a {
@@ -288,7 +280,6 @@ li {
         padding: 6px 0 0 22px;
         width: 76px;
         height: 42px;
-        /* background-color: rgba(0, 0, 0, 0.2); */
         border-left: 1px solid black;
         box-sizing: border-box;
     }
