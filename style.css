@@ -43,16 +43,31 @@ li {
     width: 80px;
     height: 88px;
     float: left;
-    padding-top: 35px;
-    padding-bottom: 32px;
     border-bottom: 3px solid #fff; 
     margin-right: 40px;
     box-sizing: border-box;
+}
+
+.menu_bar ul .menu_link{
+    display: block;
+    padding-top: 35px;
+    padding-bottom: 32px;
     cursor: pointer;
+
 }
 
 .menu_bar > ul > li:hover {
     border-bottom-color: rgb(245, 180, 95);
+    transition: .15s;
+}
+
+.menu_bar ul a {
+    cursor: pointer;
+    transition: .15s;
+}
+
+.menu_bar ul a:hover {
+    color: rgba(0, 0, 0, 0.5);
     transition: .15s;
 }
 
@@ -94,7 +109,7 @@ li {
 }
 
 .menu_bar .submenu.s2, .menu_bar .submenu.s4 {
-    display: block;
+    display: none;
     /* поменять обратно на нон */
 }
 
@@ -156,17 +171,26 @@ li {
 
 .burger {
     position: absolute;
-    top: 20px;
-    right: 40px;
+    top: 25px;
+    right: 22px;
     width: 45px;
-    height: 45px;
-    border: 1px solid black;
+    height: 38px;
+    /* border: 1px solid black; */
+    display: none;
+}
+
+.burger img {
+    display: block;
+    margin: auto;
+}
+
+.menu_bar ul li .control_list .down {
     display: none;
 }
 
 @media screen and (max-width: 1017px) {
     .menu_bar * {
-        border: 1px solid black;
+        /* border: 1px solid black; */
     }
 
     .menu_bar > ul {
@@ -174,9 +198,26 @@ li {
         top: 89px;
         width: 100%;
         background-color: #fff;
-        display: block;
+        display: none;
         max-height: calc(100vh - 88px);
         overflow-y: auto;
+    }
+
+    .menu_bar ul .menu_link {
+        padding: 18px 0 18px 25px;
+    }
+
+    .menu_bar .submenu.s2, .menu_bar .submenu.s4, .menu_bar .submenu .subsubmenu {
+        display: none;
+    }
+
+    .menu_bar ul .submenu li .subsubmenu, .menu_bar ul .submenu li .subsubmenu li {
+        margin: 0;
+    }
+
+    .menu_bar .submenu.s2 .subsubmenu.s2_2 li, .menu_bar .submenu.s2 .subsubmenu.s2_4 li {
+        width: 100%;
+        font-size: 16px;
     }
 
     .burger {
@@ -186,20 +227,23 @@ li {
     .menu_bar li {
         width: 100%;
         height: auto;
-        padding: 13px 0 13px 10px;
+        padding: 0;
+        border-bottom: none;
+        cursor: unset;
+        /* границу потом убрать */
     }
 
-    .menu_bar .submenu .subsubmenu {
-        display: none;
+    .menu_bar {
+        border-bottom: 1px solid rgb(240, 240, 240);
     }
 
-    /* .menu_bar .hoverable.hov2:hover .submenu.s2 {
+    .menu_bar .hoverable.hov2:hover .submenu.s2 {
         display: none;
     }
     
     .menu_bar .hoverable.hov4:hover .submenu.s4 {
         display: none;
-    } */
+    }
 
     .menu_bar .submenu.s2 > ul, .menu_bar .submenu.s4 > ul {
         display: block;
@@ -207,24 +251,59 @@ li {
         padding: 0;
     }
 
+    .menu_bar .submenu.s2 > ul, .menu_bar .submenu.s4 {
+        box-shadow: unset;
+    }
+
     .menu_bar .submenu.s2, .menu_bar .submenu.s4 {
         margin: 0;
         padding: 0;
     }
 
-    .menu_bar .submenu.s2 li, .menu_bar .submenu.s2 ul ul {
+    .menu_bar .submenu.s2 li, .menu_bar .submenu.s2 ul ul, .menu_bar .submenu.s4 li {
         width: 100%;
         font-size: 16px;
     }
 
     .menu_bar .submenu {
+        width: 100%;
         position: static;
     }
 
+    .menu_bar li a {
+        display: block;
+        padding: 18px 0 18px 25px;
+        border-bottom: 1px solid rgb(240, 240, 240);
+        /* width: calc(100% - 56px); */
+    }
 
-    /* @media screen and (max-height: 1017px){
-        .menu_bar > ul {
-            position: absolute;
-        }
-    } */
+    .menu_bar ul .submenu li .subsubmenu li a {
+        padding-left: 50px;
+    }
+
+    .menu_bar ul .hoverable .down {
+        position: absolute;
+        top: 6px;
+        right: 0;
+        padding: 6px 0 0 22px;
+        width: 76px;
+        height: 42px;
+        /* background-color: rgba(0, 0, 0, 0.2); */
+        border-left: 1px solid black;
+        box-sizing: border-box;
+    }
+
+    .menu_bar ul .submenu li {
+        background-color: rgb(247, 247, 247);
+    }
+
+    .menu_bar ul li .control_list .down {
+        display: block;
+
+    }
+
+    .menu_bar ul li .control_list {
+        width: 100%;
+        position: relative;
+    }
 }

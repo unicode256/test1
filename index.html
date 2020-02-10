@@ -9,13 +9,13 @@
     <body>
         <div class="menu_bar">
             <ul>
-                <li>Элемент 1</li>
-                <li class="hoverable hov2">Элемент 2
+                <li><a class="menu_link">Элемент 1</a></li>
+                <li class="hoverable hov2"><div class="control_list"><a class="menu_link">Элемент 2</a><div class="down d2"><img width="30" src="icons/down.png"></div></div>
                     <div class="submenu s2">
                         <ul>
                             <li><a>Элемент 2.1</a></li>
                             <li>
-                                <a>Элемент 2.2</a>
+                                <div class="control_list"><a>Элемент 2.2</a><div class="down d2_2"><img width="30" src="icons/down.png"></div></div>
                                 <ul class="subsubmenu s2_2">
                                     <li><a>Элемент 2.2.1</a></li>
                                     <li><a>Элемент 2.2.2</a></li>
@@ -24,7 +24,7 @@
                             </li>
                             <li><a>Элемент 2.3</a></li>
                             <li>
-                                <a>Элемент 2.4</a>
+                                <div class="control_list"><a>Элемент 2.4</a><div class="down d2_4"><img width="30" src="icons/down.png"></div></div>
                                 <ul class="subsubmenu s2_4">
                                     <li><a>Элемент 2.4.1</a></li>
                                     <li><a>Элемент 2.4.2</a></li>
@@ -40,19 +40,19 @@
                         </ul>
                     </div>
                 </li>
-                <li>Элемент 3</li>
-                <li class="hoverable hov4">Элемент 4
+                <li><a class="menu_link">Элемент 3</a></li>
+                <li class="hoverable hov4"><div class="control_list"><a class="menu_link">Элемент 4</a><div class="down d4"><img width="30" src="icons/down.png"></div></div>
                     <div class="submenu s4">
                         <ul>
-                            <li>Элемент 4.1</li>
-                            <li>Элемент 4.2</li>
+                            <li><a>Элемент 4.1</a></li>
+                            <li><a>Элемент 4.2</a></li>
                         </ul>
                     </div>
                 </li>
-                <li>Элемент 5</li>
-                <li>Элемент 6</li>
+                <li><a class="menu_link">Элемент 5</a></li>
+                <li><a class="menu_link">Элемент 6</a></li>
             </ul>
-            <div class="burger"></div>
+            <div class="burger"><img src="icons/burger.png"></div>
         </div>
         <div class="content">
             <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
@@ -68,4 +68,4 @@
         <div class="dark_bg"></div>
     </body>
 </html>
-<!-- <script src="script.js"></script> -->
+<script src="script.js"></script>
