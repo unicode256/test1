@@ -1,7 +1,17 @@
-// $('.hoverable.h2').on('mouseenter', function() {
-//     $('.fade_element').fadeIn(150);
-// });
+var bg = $('.dark_bg');
 
-// $('.hoverable.h2').on('mouseleave', function() {
-//     $('.fade_element').fadeOut(150);
-//переделать через таймер
+$('.hoverable.hov2').on('mouseenter', function () {
+    bg.fadeIn(200);
+});
+
+$('.hoverable.hov2').on('mouseleave', function () {
+    bg.fadeOut(200);
+});
+
+$('.hoverable.hov4').on('mouseenter', function () {
+    bg.fadeIn(200);
+});
+
+$('.hoverable.hov4').on('mouseleave', function () {
+    bg.fadeOut(200);
+});

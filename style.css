@@ -10,7 +10,6 @@ li {
 }
 
 .dark_bg {
-    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -18,6 +17,7 @@ li {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 998;
+    display: none;
 }
 
 .menu_bar {
@@ -26,6 +26,8 @@ li {
     background-color: #fff;
     position: fixed;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    height: 88px;
+
 }
 
 .menu_bar ul {
@@ -33,7 +35,7 @@ li {
 }
 
 .menu_bar > ul {
-    width: 72.5%;
+    width: 80%;
     margin: auto;
 }
 
@@ -47,7 +49,6 @@ li {
     margin-right: 40px;
     box-sizing: border-box;
     cursor: pointer;
-    transition: .15s;
 }
 
 .menu_bar > ul > li:hover {
@@ -61,14 +62,15 @@ li {
     margin: auto;
     left: 0;
     right: 0;
-    width: 70%;
-    display: none;
+    width: 76%;
+    box-sizing: border-box;
 }
 
 .menu_bar .submenu.s4 {
-    display: block;
     background-color: #fff;
-    padding: 20px 28px 30px 28px;
+    padding: 24px 28px 30px 28px;
+    box-shadow: inset 0px 111px 46px -123px rgba(0,0,0,0.4);
+    display: none;
 }
 
 .menu_bar .submenu.s4 li {
@@ -91,13 +93,18 @@ li {
     z-index: 999;
 }
 
+.menu_bar .submenu.s2, .menu_bar .submenu.s4 {
+    display: block;
+    /* поменять обратно на нон */
+}
+
 .menu_bar .submenu.s2 > ul {
     display: flex;
     justify-content: space-between;
-    padding: 20px 28px 0 28px;
+    padding: 24px 28px 0 28px;
     background-color: #fff;
     height: 300px;
-    box-shadow: inset 0px 111px 46px -123px rgba(0,0,0,0.27);
+    box-shadow: inset 0px 111px 46px -123px rgba(0,0,0,0.4);
 }
 
 .menu_bar .submenu.s2 li, .menu_bar .submenu.s2 ul ul {
@@ -129,6 +136,14 @@ li {
     margin-bottom: 10px;
 }
 
+.menu_bar .hoverable.hov2:hover .submenu.s2 {
+    display: block;
+}
+
+.menu_bar .hoverable.hov4:hover .submenu.s4 {
+    display: block;
+}
+
 .content {
     padding-top: 120px;
     width: 80%;
@@ -137,4 +152,79 @@ li {
 
 .content p {
     margin-bottom: 30px;
+}
+
+.burger {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    width: 45px;
+    height: 45px;
+    border: 1px solid black;
+    display: none;
+}
+
+@media screen and (max-width: 1017px) {
+    .menu_bar * {
+        border: 1px solid black;
+    }
+
+    .menu_bar > ul {
+        position: fixed;
+        top: 89px;
+        width: 100%;
+        background-color: #fff;
+        display: block;
+        max-height: calc(100vh - 88px);
+        overflow-y: auto;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .menu_bar li {
+        width: 100%;
+        height: auto;
+        padding: 13px 0 13px 10px;
+    }
+
+    .menu_bar .submenu .subsubmenu {
+        display: none;
+    }
+
+    /* .menu_bar .hoverable.hov2:hover .submenu.s2 {
+        display: none;
+    }
+    
+    .menu_bar .hoverable.hov4:hover .submenu.s4 {
+        display: none;
+    } */
+
+    .menu_bar .submenu.s2 > ul, .menu_bar .submenu.s4 > ul {
+        display: block;
+        height: auto;
+        padding: 0;
+    }
+
+    .menu_bar .submenu.s2, .menu_bar .submenu.s4 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu_bar .submenu.s2 li, .menu_bar .submenu.s2 ul ul {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .menu_bar .submenu {
+        position: static;
+    }
+
+
+    /* @media screen and (max-height: 1017px){
+        .menu_bar > ul {
+            position: absolute;
+        }
+    } */
 }
